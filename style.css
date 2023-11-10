@@ -2,6 +2,26 @@ html {
     scroll-behavior: smooth;
 }
 
+@media only screen and (max-width: 600px) {
+    /* Styles for screens up to 600px wide (typical mobile devices) */
+    body {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* Hide an element on small screens */
+    .hide-on-small {
+        display: none;
+    }
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body, h1, h2, p {
     margin: 0;
     padding: 0;
@@ -26,6 +46,38 @@ header {
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+/* Styles for small screens */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
 
 main {
